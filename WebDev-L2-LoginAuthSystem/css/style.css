@@ -1,0 +1,452 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow:auto;
+    padding: 40px 20px;
+    position:relative;
+    background:linear-gradient(-45deg,#050505,#1a1a1a,#3d3d3d,#0d0d0d);
+    background-size:400% 400%;
+    animation:gradientMove 15s ease infinite;
+}
+
+/* ===========================
+   ANIMATED BACKGROUND
+=========================== */
+
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.25;
+    z-index:-1;
+}
+
+body::before{
+    background:#ffffff;
+    top:-120px;
+    left:-100px;
+    animation:float1 10s ease-in-out infinite;
+}
+
+body::after{
+    background:#666666;
+    bottom:-140px;
+    right:-100px;
+    animation:float2 12s ease-in-out infinite;
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes float1{
+
+0%,100%{
+transform:translateY(0) translateX(0);
+}
+
+50%{
+transform:translateY(60px) translateX(50px);
+}
+
+}
+
+@keyframes float2{
+
+0%,100%{
+transform:translateY(0) translateX(0);
+}
+
+50%{
+transform:translateY(-70px) translateX(-40px);
+}
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+    position:fixed;
+    top:25px;
+    left:35px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo-text{
+    color:white;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container,
+.dashboard{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.auth-card,
+.dashboard-card{
+
+    width:100%;
+    max-width:460px;
+    padding:30px;
+    border-radius:24px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(22px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.5),
+    inset 0 1px rgba(255,255,255,.08);
+    color:white;
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+.auth-card h1,
+.dashboard-card h1{
+
+font-size:32px;
+font-weight:700;
+margin-bottom:5px;
+text-align:center;
+
+}
+
+.auth-card p,
+.dashboard-card p{
+
+text-align:center;
+color:#d5d5d5;
+margin-bottom:35px;
+font-size:15px;
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.input-group{
+
+margin-bottom:22px;
+
+}
+
+.input-group label{
+
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:500;
+color:#e7e7e7;
+
+}
+
+.input-group input{
+
+width:100%;
+
+padding:15px 18px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.07);
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.35s;
+
+}
+
+.input-group input::placeholder{
+
+color:#bcbcbc;
+
+}
+
+.input-group input:focus{
+
+border-color:white;
+
+box-shadow:0 0 20px rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.12);
+
+}
+
+/* ===========================
+   PASSWORD
+=========================== */
+
+.password-box{
+
+position:relative;
+
+}
+
+.toggle-password{
+
+position:absolute;
+
+right:16px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
+font-size:18px;
+
+color:#d8d8d8;
+
+transition:.3s;
+
+}
+
+.toggle-password:hover{
+
+transform:translateY(-50%) scale(1.15);
+
+color:white;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+
+width:100%;
+
+padding:15px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:white;
+
+background:linear-gradient(135deg,#5e5e5e,#ffffff,#5e5e5e);
+
+background-size:200%;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background-position:right;
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 25px rgba(255,255,255,.2);
+
+color:black;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.bottom-text{
+
+margin-top:28px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#d7d7d7;
+
+}
+
+.bottom-text a{
+
+color:white;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.bottom-text a:hover{
+
+letter-spacing:.5px;
+
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.error-message{
+
+min-height:22px;
+
+margin-top:10px;
+
+text-align:center;
+
+color:#ff7b7b;
+
+font-size:14px;
+
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard-card{
+
+text-align:center;
+
+}
+
+.dashboard-card h1{
+
+margin-bottom:20px;
+
+}
+
+.dashboard-card p{
+
+margin-bottom:35px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:600px){
+
+.auth-card,
+.dashboard-card{
+
+padding:30px;
+
+}
+
+.auth-card h1,
+.dashboard-card h1{
+
+font-size:30px;
+
+}
+
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Productivity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <nav>
+
+            <h2>TaskFlow</h2>
+
+            <ul>
+
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>Plan Better.<br>Achieve More.</h1>
+
+                <p>
+
+                    TaskFlow is a simple productivity dashboard that helps
+                    you organize tasks, monitor progress, and stay focused
+                    throughout the day.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#tasks" class="primary-btn">
+                        Start Planning
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <h3>Today's Focus</h3>
+
+                <p>"The secret of getting ahead is getting started."</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2>Why TaskFlow?</h2>
+
+        <p>
+
+            Managing daily work can become overwhelming when important
+            tasks are scattered across notebooks, sticky notes, or
+            multiple apps. TaskFlow brings everything together into
+            one clean workspace where you can plan, organize,
+            and complete your goals efficiently.
+
+        </p>
+
+        <p>
+
+            Whether you're a student, developer, freelancer,
+            or professional, TaskFlow helps you stay productive
+            by tracking your progress and celebrating every
+            completed task.
+
+        </p>
+<br>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <h2>Features</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+
+                <h3>📝 Manage Tasks</h3>
+
+                <p>
+                    Add, edit and delete tasks instantly.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>✅ Track Progress</h3>
+
+                <p>
+                    Separate pending and completed tasks.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>💾 Auto Save</h3>
+
+                <p>
+                    Your tasks stay safe using Local Storage.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>📱 Responsive</h3>
+
+                <p>
+                    Works beautifully on desktop and mobile.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>📊 Dashboard</h3>
+
+                <p>
+                    Monitor productivity with task statistics.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <h3>🎯 Stay Focused</h3>
+
+                <p>
+                    Build better habits every single day.
+                </p>
+                <br>
+                <br>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <section class="dashboard" id="dashboard">
+
+        <h2>Productivity Overview</h2>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <h1 id="pendingCount">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <h1 id="completedCount">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total Tasks</h3>
+
+                <h1 id="totalCount">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Completion</h3>
+
+                <h1 id="progressText">0%</h1>
+
+            </div>
+
+        </div>
+
+        <div class="progress-bar">
+
+            <div id="progressFill"></div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TASK APP ================= -->
+
+    <section class="task-app" id="tasks">
+
+        <h2>Task Manager</h2>
+
+        <p>
+
+            Start organizing your day by adding your first task.
+
+        </p>
+
+        <div class="input-section">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done today?"
+            >
+
+            <button id="addTaskBtn">
+
+                + Add Task
+
+            </button>
+
+        </div>
+
+        <div class="task-section">
+
+            <div class="task-box">
+
+                <h3>Pending Tasks</h3>
+
+                <p id="pendingEmpty" class="empty">
+
+                    Nothing pending. Great job!
+
+                </p>
+
+                <ul id="pendingList"></ul>
+
+            </div>
+
+            <div class="task-box">
+
+                <h3>Completed Tasks</h3>
+
+                <p id="completedEmpty" class="empty">
+
+                    No completed tasks yet.
+
+                </p>
+
+                <ul id="completedList"></ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MOTIVATION ================= -->
+
+    <section class="quote">
+
+        <blockquote>
+
+            "Success doesn't come from what you do occasionally. It comes from what you do consistently."
+
+        </blockquote>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>TaskFlow</h2>
+
+        <p>
+
+            Built using HTML, CSS and JavaScript.
+
+        </p>
+
+        <p>
+
+            © 2026 | Designed by Steffy Stephan
+
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

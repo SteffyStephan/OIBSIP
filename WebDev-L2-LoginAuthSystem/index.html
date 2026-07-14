@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Auth System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="logo">
+    <div class="logo-box">aF</div>
+    <span class="logo-text">authFlow</span>
+</div>
+
+    <div class="container">
+
+        <div class="auth-card">
+
+            <h1>Welcome Back 👋</h1>
+            <p>Login to continue</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="loginUser">Username or Email</label>
+                    <input
+                        type="text"
+                        id="loginUser"
+                        placeholder="Enter username or email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+
+                    <div class="password-box">
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleLoginPassword"
+                            class="toggle-password">
+                            👁
+                        </button>
+                    </div>
+                </div>
+
+                <p class="error-message" id="loginError"></p>
+
+                <button type="submit" class="btn">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="bottom-text">
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/hash.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>
